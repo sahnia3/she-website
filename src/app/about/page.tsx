@@ -3,6 +3,7 @@ import { SectionHeading } from "@/components/SectionHeading";
 import { DividerOrnament, Ornament } from "@/components/Ornament";
 import { Logo } from "@/components/Logo";
 import { Reveal, RevealGroup, RevealChild } from "@/components/Reveal";
+import React from "react";
 
 export const metadata = {
   title: "About — SHE",
@@ -146,7 +147,7 @@ export default function AboutPage() {
             </p>
           </Reveal>
 
-          <RevealGroup className="mt-20 grid md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          <RevealGroup className="mt-20 grid lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {[
               {
                 word: "Access",
@@ -163,7 +164,7 @@ export default function AboutPage() {
             ].map((p) => (
               <RevealChild
                 key={p.word}
-                className="relative h-full bg-maroon-deep/40 border border-gold/20 p-10 backdrop-blur-sm"
+                className="relative h-full bg-maroon-deep/40 border border-gold/20 px-7 py-10 backdrop-blur-sm"
               >
                 <div className="absolute top-3 left-3 text-gold/50">
                   <Ornament size={36} corner="tl" />
@@ -174,7 +175,7 @@ export default function AboutPage() {
                 <p className="font-display uppercase tracking-[0.12em] text-3xl text-gold-light">
                   {p.word}
                 </p>
-                <p className="mt-5 font-serif text-lg text-cream/85 leading-relaxed">
+                <p className="mt-5 font-serif text-lg text-cream/95 leading-relaxed">
                   {p.body}
                 </p>
               </RevealChild>
@@ -182,7 +183,7 @@ export default function AboutPage() {
           </RevealGroup>
 
           <Reveal>
-            <p className="mt-16 text-center font-serif italic text-xl md:text-2xl text-cream/85 max-w-2xl mx-auto leading-relaxed">
+            <p className="mt-16 text-center font-serif italic text-xl md:text-2xl text-cream/95 max-w-2xl mx-auto leading-relaxed">
               Your support is not just a donation. It is the chance for women
               to build their own future.
             </p>
@@ -197,15 +198,12 @@ export default function AboutPage() {
           </div>
 
           <div className="flex items-center justify-center gap-6 md:gap-10 flex-wrap">
-            {["Shakti", "Harmony", "Empowerment"].map((word, i) => (
-              <div key={word} className="flex items-center gap-6 md:gap-10">
+            {["Shakti", "Harmony", "Empowerment"].map((word, i, arr) => (
+              <React.Fragment key={word}>
                 <p className="font-display uppercase tracking-[0.28em] text-xl md:text-3xl text-maroon">
                   {word}
                 </p>
-                {i < 2 && (
-                  <span className="text-gold text-2xl">·</span>
-                )}
-              </div>
+              </React.Fragment>
             ))}
           </div>
 
