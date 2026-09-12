@@ -198,12 +198,13 @@ export default function AboutPage() {
           </div>
 
           <div className="flex items-center justify-center gap-6 md:gap-10 flex-wrap">
-            {["Shakti", "Harmony", "Empowerment"].map((word, i, arr) => (
-              <React.Fragment key={word}>
-                <p className="font-display uppercase tracking-[0.28em] text-xl md:text-3xl text-maroon">
-                  {word}
-                </p>
-              </React.Fragment>
+            {["Shakti", "Harmony", "Empowerment"].map((word) => (
+              <p
+                key={word}
+                className="font-display uppercase tracking-[0.28em] text-xl md:text-3xl text-maroon"
+              >
+                {word}
+              </p>
             ))}
           </div>
 

@@ -90,16 +90,6 @@ export default function FounderPage() {
                   </div>
                 </div>
 
-                <div className="relative mt-6 aspect-[5/6] border-[6px] border-ivory shadow-[0_20px_60px_-20px_rgba(78,31,56,0.5)] overflow-hidden bg-plum -rotate-1">
-                  <Image
-                    src="/brand/miti-2.png"
-                    alt="Miti Vyas in traditional wear"
-                    fill
-                    sizes="(min-width: 768px) 35vw, 80vw"
-                    className="object-cover object-center"
-                  />
-                </div>
-
                 <div className="mt-8 bg-cream border border-maroon/10 p-6 relative">
                   <div className="absolute -top-3 left-6 px-3 bg-cream font-display uppercase tracking-[0.22em] text-[10px] text-gold">
                     My SHE Spotlight
@@ -177,10 +167,22 @@ export default function FounderPage() {
       </section>
 
       <section className="painterly-rose relative text-cream py-24 md:py-32 overflow-hidden">
+        <div className="absolute top-10 left-10 text-gold/40">
+          <Ornament size={80} corner="tl" />
+        </div>
+        <div className="absolute bottom-10 right-10 text-gold/40">
+          <Ornament size={80} corner="br" />
+        </div>
         <Reveal className="relative max-w-3xl mx-auto px-6 text-center">
           <p className="font-script text-5xl md:text-6xl text-gold-light leading-none">
-            Stand with her
+            Stand with
           </p>
+          <p className="mt-3 font-display uppercase text-5xl md:text-7xl tracking-[0.12em] text-cream leading-none">
+            SHE
+          </p>
+          <div className="mt-8 flex justify-center text-gold">
+            <DividerOrnament />
+          </div>
           <p className="mt-6 font-display uppercase tracking-[0.28em] text-sm text-cream/90">
             The beginning of something powerful
           </p>
